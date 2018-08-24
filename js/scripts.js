@@ -4,9 +4,11 @@ function Pizza(topping, size) {
   this.size = size;
 }
 
-Pizza.prototype.calculateCost = function(pizzaToppings) {
-  var total = this.topping + this.size;
-  console.log(total);
+Pizza.prototype.calculateCost = function(toppingInput) {
+  for (i = 0; i <= toppingInput.length; i++) {
+    var total = parseFloat(this.topping) + this.size;
+    console.log(total);
+  }
   return total;
 }
 
@@ -17,7 +19,8 @@ $(document).ready(function() {
     event.preventDefault();
     $("#priceEstimate").show();
 
-    var toppingInput = parseFloat($("#toppingsSelect").val());
+    var toppingInput = $("#toppingsSelect").val();
+    console.log(toppingInput);
     var numberOfToppings = toppingInput.length;
     var sizeInput = parseFloat($("#sizeSelect").val());
 
@@ -29,7 +32,6 @@ $(document).ready(function() {
     console.log("total cost = " + totalCost);
 
     //text displayed to user ----------->
-    // $("#displayToppingsList").text(toppingInput.splice(",").join(', ') + " (" + numberOfToppings + ")");
     $("#displayToppingsSubtotal").text("$" + toppingInput)
     $("#displaySizeSubtotal").text("$" + sizeInput);
     $("#finalCost").text(totalCost);
