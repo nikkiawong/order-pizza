@@ -4,12 +4,15 @@ function Pizza(topping, size) {
   this.size = size;
 }
 
-Pizza.prototype.calculateCost = function(toppingInput) {
-  for (i = 0; i <= toppingInput.length; i++) {
-    var total = parseFloat(this.topping) + this.size;
-    console.log(total);
-  }
+Pizza.prototype.calculateToppingCost = function(toppingInput) {
+  var total = parseFloat(this.topping);
+  console.log(total);
   return total;
+}
+
+Pizza.prototype.calculateTotalCost = function(toppingCost) {
+  var sumOfToppingAndSize = toppingCost + this.size;
+  return sumOfToppingAndSize;
 }
 
 //user interface logic
@@ -28,11 +31,14 @@ $(document).ready(function() {
 
     console.log(onePizza);
 
-    var totalCost = onePizza.calculateCost(toppingInput);
-    console.log("total cost = " + totalCost);
+    var toppingCost = onePizza.calculateToppingCost(toppingInput);
+    console.log("topping subtotal = " + toppingCost);
+
+    var totalCost = onePizza.calculateTotalCost(toppingCost);
+    console.log(totalCost);
 
     //text displayed to user ----------->
-    $("#displayToppingsSubtotal").text("$" + toppingInput)
+    $("#displayToppingsSubtotal").text("$" + toppingCost)
     $("#displaySizeSubtotal").text("$" + sizeInput);
     $("#finalCost").text(totalCost);
   });
