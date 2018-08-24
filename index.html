@@ -6,26 +6,26 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
-    <title>Order Pizza</title>
+    <title>Laundry Pizza</title>
   </head>
   <body>
     <div class="container">
-      <h1>Order Pizza</h1>
+      <h1>Laundry Pizza</h1>
       <form id="pizzaForm">
       <div class="form-group">
         <!-- toppings: $0.50/each -->
-        <label for="toppingsSelect">Toppings</label>
+        <label for="toppingsSelect">Choose your toppings:</label>
         <select multiple class="form-control" id="toppingsSelect">
-          <option value="Pepperoni">Pepperoni</option>
-          <option value="Sausage">Sausage</option>
-          <option value="Mushroom">Mushrooms</option>
-          <option value="Onion">Onion</option>
-          <option value="Pepper">Pepper</option>
-          <option value="Pineapple">Pineapple</option>
+          <option value="pepperoni">Pepperoni</option>
+          <option value="sausage">Sausage</option>
+          <option value="mushroom">Mushrooms</option>
+          <option value="onion">Onion</option>
+          <option value="pepper">Pepper</option>
+          <option value="pineapple">Pineapple</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="sizeSelect">Size</label>
+        <label for="sizeSelect">Choose a size:</label>
         <select class="form-control" id="sizeSelect">
           <option value="1" name="small">Small</option>
           <option value="2" name="medium">Medium</option>
@@ -38,10 +38,11 @@
       </form>
 
       <div id="orderConfirmation">
-        <h4>Topping Subtotal</h4>
-        <p><span id="displayToppings"></span></p>
+        <h4>Toppings Subtotal</h4>
+        <p><span id="displayToppingsList"></span></p>
+        <p><span id="displayToppingsSubtotal"></span></p>
         <h4>Size Subtotal</h4>
-        <p><span id="displaySize"></span></p>
+        <p><span id="displaySizeSubtotal"></span></p>
         <h2>Total Cost</h2>
         <p>$<span id="finalCost"></span></p>
       </div>

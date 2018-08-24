@@ -17,11 +17,6 @@ Pizza.prototype.calculateCost = function(numberOfToppings) {
     var total = (numberOfToppings * 0.5) + (this.size * 5);
     return total;
 }
-//
-// Pizza.prototype.calculateCostOfSize = function() {
-//   var total = this.size * 5;
-//   return total;
-// }
 
 //user interface logic
 $(document).ready(function() {
