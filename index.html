@@ -13,31 +13,38 @@
       <h1>Order Pizza</h1>
       <form id="pizzaForm">
       <div class="form-group">
+        <!-- toppings: $0.50/each -->
         <label for="toppingsSelect">Toppings</label>
         <select multiple class="form-control" id="toppingsSelect">
-          <option>Pepperoni</option>
-          <option>Sausage</option>
-          <option>Mushrooms</option>
-          <option>Onion</option>
-          <option>Pepper</option>
-          <option>Extra Cheese</option>
-          <option>Pineapple</option>
-          <option>Ham</option>
+          <option value="Pepperoni">Pepperoni</option>
+          <option value="Sausage">Sausage</option>
+          <option value="Mushroom">Mushrooms</option>
+          <option value="Onion">Onion</option>
+          <option value="Pepper">Pepper</option>
+          <option value="Pineapple">Pineapple</option>
         </select>
       </div>
       <div class="form-group">
         <label for="sizeSelect">Size</label>
         <select class="form-control" id="sizeSelect">
-          <option>Small (serves 1-2)</option>
-          <option>Medium (serves 2-3)</option>
-          <option>Large (serves 4-6)</option>
-          <option>Family Size (6-8)</option>
-          <option>Party Size (serves 12)</option>
+          <option value="1">Small (serves 1-2)</option>
+          <option value="2">Medium (serves 2-3)</option>
+          <option value="3">Large (serves 4-6)</option>
+          <option value="4">Family Size (6-8)</option>
         </select>
       </div>
 
       <button type="submit" class="btn btn-info" name="button" id="orderButton">Place Order</button>
       </form>
+
+      <div id="orderConfirmation">
+        <h4>Toppings</h4>
+        <p><span id="displayToppings"></span></p>
+        <h4>Size</h4>
+        <p><span id="displaySize"></span></p>
+        <h2>Total Cost</h2>
+        <p>$<span id="finalCost"></span></p>
+      </div>
     </div>
   </body>
 </html>
