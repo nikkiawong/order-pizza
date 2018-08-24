@@ -27,10 +27,10 @@
       <div class="form-group">
         <label for="sizeSelect">Size</label>
         <select class="form-control" id="sizeSelect">
-          <option value="1">Small (serves 1-2)</option>
-          <option value="2">Medium (serves 2-3)</option>
-          <option value="3">Large (serves 4-6)</option>
-          <option value="4">Family Size (6-8)</option>
+          <option value="1" name="small">Small</option>
+          <option value="2" name="medium">Medium</option>
+          <option value="3" name="large">Large</option>
+          <option value="4" name="family">Family</option>
         </select>
       </div>
 
@@ -38,9 +38,9 @@
       </form>
 
       <div id="orderConfirmation">
-        <h4>Toppings</h4>
+        <h4>Topping Subtotal</h4>
         <p><span id="displayToppings"></span></p>
-        <h4>Size</h4>
+        <h4>Size Subtotal</h4>
         <p><span id="displaySize"></span></p>
         <h2>Total Cost</h2>
         <p>$<span id="finalCost"></span></p>
