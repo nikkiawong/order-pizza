@@ -5,7 +5,7 @@ function Pizza(topping, size) {
 }
 
 Pizza.prototype.calculateToppingCost = function(toppingInput) {
-  var total = parseFloat(this.topping);
+  var total = parseFloat(this.topping) * toppingInput.length;
   console.log(total);
   return total;
 }
@@ -23,7 +23,6 @@ $(document).ready(function() {
     $("#priceEstimate").show();
 
     var toppingInput = $("#toppingsSelect").val();
-    console.log(toppingInput);
     var numberOfToppings = toppingInput.length;
     var sizeInput = parseFloat($("#sizeSelect").val());
 
@@ -38,8 +37,8 @@ $(document).ready(function() {
     console.log(totalCost);
 
     //text displayed to user ----------->
-    $("#displayToppingsSubtotal").text("$" + toppingCost)
-    $("#displaySizeSubtotal").text("$" + sizeInput);
-    $("#finalCost").text(totalCost);
+    $("#displayToppingsSubtotal").text("$" + (toppingCost).toFixed(2))
+    $("#displaySizeSubtotal").text("$" + (sizeInput).toFixed(2));
+    $("#finalCost").text((totalCost).toFixed(2));
   });
 });
