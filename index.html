@@ -11,10 +11,10 @@
   <body>
     <div class="container">
       <h1>Order Pizza</h1>
-      <form>
+      <form id="pizzaForm">
       <div class="form-group">
-        <label for="exampleSelect2">Toppings</label>
-        <select multiple class="form-control" id="exampleSelect2">
+        <label for="toppingsSelect">Toppings</label>
+        <select multiple class="form-control" id="toppingsSelect">
           <option>Pepperoni</option>
           <option>Sausage</option>
           <option>Mushrooms</option>
@@ -26,17 +26,17 @@
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleSelect1">Size</label>
-        <select class="form-control" id="exampleSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
+        <label for="sizeSelect">Size</label>
+        <select class="form-control" id="sizeSelect">
+          <option>Small (serves 1-2)</option>
+          <option>Medium (serves 2-3)</option>
+          <option>Large (serves 4-6)</option>
+          <option>Family Size (6-8)</option>
+          <option>Party Size (serves 12)</option>
         </select>
       </div>
 
-      <button type="submit" class="btn btn-info" name="button">Place Order</button>
+      <button type="submit" class="btn btn-info" name="button" id="orderButton">Place Order</button>
       </form>
     </div>
   </body>
