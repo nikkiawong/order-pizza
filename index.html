@@ -11,39 +11,57 @@
   <body>
     <div class="container">
       <h1>Laundry Pizza</h1>
-      <h2>Build Your Own Pie</h2>
-      <form id="pizzaForm">
-      <div class="form-group">
-        <!-- toppings: $0.50/each -->
-        <label for="toppingsSelect">Choose your toppings:</label>
-        <select multiple class="form-control" id="toppingsSelect">
-          <option value="0.5">Pepperoni</option>
-          <option value="0.5">Sausage</option>
-          <option value="0.5">Mushrooms</option>
-          <option value="0.5">Onion</option>
-          <option value="0.5">Pepper</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="sizeSelect">Choose a size:</label>
-        <select class="form-control" id="sizeSelect">
-          <option value="5" name="small">Small</option>
-          <option value="10" name="medium">Medium</option>
-          <option value="15" name="large">Large</option>
-          <option value="20" name="family">Family</option>
-        </select>
-      </div>
+      <h2>Build Your Own Pie Price Estimator</h2>
+      <div id="siteExplanation">
+        <h3>How It Works</h3>
+        <h4>Step 1: Choose Your Toppings</h4>
+        <ul>
+          <li>Choose from 5 different toppings: pepperoni, sausage, mushrooms, onion, and/or pepper</li>
+          <li>$0.50 per additional topping</li>
+        </ul>
+        <h4>Step 2: Choose Your Pizza Size</h4>
+        <ul>
+          <li>Small (serves 1-2 people) - $5.00</li>
+          <li>Medium (serves 2-3 people) - $10.00</li>
+          <li>Large (serves 3-5 people) - $15.00</li>
+          <li>Family Size (serves 6-8 people) - $5.00</li>
+        </ul>
 
-      <button type="submit" class="btn btn-info" name="button" id="priceEstimateButton">Get Price Estimate</button>
+        <button type="button" class="btn btn-success" id="showPizzaForm" name="button">Start</button>
+      </div>
+      <form id="pizzaForm">
+        <div class="form-group">
+          <label for="toppingsSelect">Choose your toppings:</label>
+          <select multiple class="form-control" id="toppingsSelect">
+            <option value="0.5">Pepperoni</option>
+            <option value="0.5">Sausage</option>
+            <option value="0.5">Mushrooms</option>
+            <option value="0.5">Onion</option>
+            <option value="0.5">Pepper</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sizeSelect">Choose a size:</label>
+          <select class="form-control" id="sizeSelect">
+            <option value="5" name="small">Small - $5.00</option>
+            <option value="10" name="medium">Medium - $10.00</option>
+            <option value="15" name="large">Large - $15.00</option>
+            <option value="20" name="family">Family Size - $20.00</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-info" name="button" id="priceEstimateButton">Get Price Estimate</button>
       </form>
 
-      <div id="priceEstimate">
-        <h4>Toppings Subtotal</h4>
-        <p><span id="displayToppingsSubtotal"></span></p>
-        <h4>Size Subtotal</h4>
-        <p><span id="displaySizeSubtotal"></span></p>
-        <h3>Total Cost</h3>
-        <p>$<span id="finalCost"></span></p>
+      <div class="card" id="priceEstimate">
+        <div class="card-body">
+          <h5>Toppings Subtotal</h5>
+          <p><span id="displayToppingsSubtotal"></span></p>
+          <h5>Size Subtotal</h5>
+          <p><span id="displaySizeSubtotal"></span></p>
+          <h3>Total Cost</h3>
+          <p id="finalCostDisplay">$<span id="finalCost"></span></p>
+        </div>
       </div>
     </div>
   </body>

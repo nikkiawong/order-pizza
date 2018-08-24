@@ -6,7 +6,6 @@ function Pizza(topping, size) {
 
 Pizza.prototype.calculateToppingCost = function(toppingInput) {
   var total = parseFloat(this.topping) * toppingInput.length;
-  console.log(total);
   return total;
 }
 
@@ -17,6 +16,10 @@ Pizza.prototype.calculateTotalCost = function(toppingCost) {
 
 //user interface logic
 $(document).ready(function() {
+  $("#showPizzaForm").click(function(event) {
+    $("#siteExplanation").hide();
+    $("#pizzaForm").show();
+  });
 
   $("form#pizzaForm").submit(function(event) {
     event.preventDefault();
@@ -28,15 +31,10 @@ $(document).ready(function() {
 
     var onePizza = new Pizza(toppingInput, sizeInput);
 
-    console.log(onePizza);
-
     var toppingCost = onePizza.calculateToppingCost(toppingInput);
-    console.log("topping subtotal = " + toppingCost);
 
     var totalCost = onePizza.calculateTotalCost(toppingCost);
-    console.log(totalCost);
 
-    //text displayed to user ----------->
     $("#displayToppingsSubtotal").text("$" + (toppingCost).toFixed(2))
     $("#displaySizeSubtotal").text("$" + (sizeInput).toFixed(2));
     $("#finalCost").text((totalCost).toFixed(2));

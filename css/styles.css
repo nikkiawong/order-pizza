@@ -1,3 +1,26 @@
-#priceEstimate {
+#priceEstimate, #pizzaForm {
   display: none;
+}
+
+.container {
+  margin-top: 5%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+.btn {
+  margin-bottom: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+#finalCostDisplay {
+  font-size: 30px;
 }
