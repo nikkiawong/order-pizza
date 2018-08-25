@@ -4,16 +4,18 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru|Oswald" rel="stylesheet">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/scripts.js"></script>
     <title>Laundry Pizza</title>
   </head>
   <body>
     <div class="container">
-      <h1>Laundry Pizza</h1>
+      <h1><a href="index.html"><span class="red">LAUNDRY</span> PIZZA</a></h1>
+      <img src="img/laundrypizza.jpg" alt="Laundry Pizza restaurant">
       <h2>Build Your Own Pie Price Estimator</h2>
       <div id="siteExplanation">
-        <h3>How It Works</h3>
+        <h3><span class="underline">How It Works</h3>
         <h4>Step 1: Choose Your Toppings</h4>
         <ul>
           <li>Choose from 5 different toppings: pepperoni, sausage, mushrooms, onion, and/or pepper</li>
@@ -27,7 +29,7 @@
           <li>Family Size (serves 6-8 people) - $5.00</li>
         </ul>
 
-        <button type="button" class="btn btn-success" id="showPizzaForm" name="button">Start</button>
+        <button type="button" class="btn btn-danger" id="showPizzaForm" name="button">Start</button>
       </div>
       <form id="pizzaForm">
         <div class="form-group">
@@ -50,7 +52,7 @@
           </select>
         </div>
 
-        <button type="submit" class="btn btn-info" name="button" id="priceEstimateButton">Get Price Estimate</button>
+        <button type="submit" class="btn btn-danger" name="button" id="priceEstimateButton">Get Price Estimate</button>
       </form>
 
       <div class="card" id="priceEstimate">
