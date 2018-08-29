@@ -8,6 +8,18 @@
 
 A website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc) and a size to order a pizza and see the final cost.
 
+## Specifications
+
+* When topping option(s) is/are submitted, topping cost is calculated as $0.50 per topping, returned, and displayed
+  * Example Input: "Pepperoni, Sausage"
+  * Expected Output: "$1.00"
+* When size option is submitted, size cost is determined by input value, returned, and displayed
+  * Example Input: "Medium - $10.00"
+  * Example Output: "$10.00"
+* Topping cost and the set price of the selected pizza size are added together and the total is returned and displayed
+  * Example Input: "Pepperoni, Sausage, Medium - $10.00"
+  * Example Output: "$11.00"
+
 ## Setup
 
 * Clone this repository
